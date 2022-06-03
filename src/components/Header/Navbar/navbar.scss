@@ -11,24 +11,24 @@
   width: 100%;
   border: none;
   
+}
 
-
-  &__logo {
+.navbar__logo {
     display: flex;
     margin-right: 4rem;
     margin-left: 2rem;
   }
 
-  &__links {
+.navbar__links {
   display: flex;
   justify-content: center;
   }
 
-  &__link {
-    text-align: center;
-    margin: 0.5em;
-    font-size: 110%;
-    font-weight:300;
+.navbar__link {
+  text-align: center;
+  margin: 0.5em;
+  font-size: 110%;
+  font-weight:300;
     &:hover{
       color: white; 
       }
@@ -37,7 +37,7 @@
     }
   }
 
-  &__burger {
+.navbar__burger {
     width: 40px;
     height: 40px;
     background: transparent;
@@ -48,66 +48,86 @@
 
   @media screen and (max-width: 768px){
     
-    &__links{
+  .navbar__links{
       flex-direction: column;
       justify-content: center;
       text-align: center;
       align-items: center;
       position: fixed;
-      right:0;
-      left:0;
+      right:-100vw;
       top: 0;
       height: 40vh;
       padding:1rem;
       background-color:vars.$main-color ;
-
+      
+    }
+  
+    .navbar__show-nav .navbar__logo {
+      display: flex;
+      margin-right: 4rem;
+      margin-left: 2rem;
     }
 
-    &__link{
+  .navbar__show-nav .navbar__links{
+      right:0;
+      width: 100vw;
+      visibility: visible;
+      color:white;
+    }
+    
+
+  .navbar__link{
       display: block;
       padding: 1.5rem;
       font-size: 20px;
     }
 
-    &__burger {
+  .navbar__burger {
       display: block;
       position:fixed;
-      top: 1rem;
-      right:1rem;
+      top: 0.2rem;
+      right:2rem;
     }    
 
-    .burger-bar,
-    .burger-bar::before,
-    .burger-bar::after{
+  .burger-bar,
+  .burger-bar::before,
+  .burger-bar::after{
       display: block;
       width: 40px;
       height: 3px;
       position:relative;
       border-radius: 3px;
       background: white;
+      transition: all .3s ease-in-out;
 
     }
-    .burger-bar::before,
-    .burger-bar::after{
+  .burger-bar::before,
+  .burger-bar::after{
       content:"";
       position: absolute;
       left:0;
     }
 
-    .burger-bar::before{
-      transform: translateY(-12px);
+  .burger-bar::before{
+      transform: translateY(-11px);
     }
 
-    .burger-bar::after{
+  .burger-bar::after{
       transform: translateY(12px);
     }
 
-    .show-nav .navbar__links{
-      right:0;
-      width: 100vw;
-      visibility: visible;
+  .navbar__show-nav .burger-bar {
+    width: 0;  
+    background: transparent;
+    }
+
+    .navbar__show-nav .burger-bar::before {
+      transform: rotate(45deg);
+    }
+
+    .navbar__show-nav .burger-bar::after {
+      transform: rotate(-45deg);
     }
 
   }
 
-}
