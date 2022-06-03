@@ -10,6 +10,8 @@ function Podcasts() {
   return (
     
     <div className="podcasts">
+      <h2 className="podcasts__title">Nos Podcasts</h2>
+      <div className="podcasts__data">
       {podcasts.map((podcast) => (   
           <Podcast 
             title={podcast.title}
@@ -18,6 +20,7 @@ function Podcasts() {
             id={podcast.id}
           />
           ))}
+      </div>    
     </div>
   );
 }

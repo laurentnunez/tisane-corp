@@ -13,7 +13,7 @@ function Podcast({
   return (
     <Link to={`/podcast/${id}`}>
     <div className="podcast">
-      <img className="podcast__image" src={image} alt={title}/> 
+      <img className="podcast__image" src={image} alt={title} /> 
     </div>
     </Link>
   );
