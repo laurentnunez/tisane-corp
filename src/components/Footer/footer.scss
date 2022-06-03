@@ -1,0 +1,21 @@
+.footer{
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Poppins';
+  width: 100%;
+  padding: 1em;
+  &__copyright{
+    font-weight: 200;
+  }
+
+  &__link{
+    font-weight: 300;
+    margin-bottom: 1em;
+    &:hover{
+     color: rgb(218, 218, 218);
+    }
+  }
+}

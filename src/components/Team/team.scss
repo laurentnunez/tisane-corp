@@ -1,0 +1,10 @@
+.team {
+  min-height: 90vh;
+  align-items: center;
+  margin: auto;
+  margin-top: 5rem;
+  width: 80%;
+  @media screen and (min-width: 768px){
+    width: 80%;
+  }
+}

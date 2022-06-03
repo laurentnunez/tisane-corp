@@ -1,0 +1,113 @@
+@use 'src/styles/vars';
+.navbar{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+   background-color: rgba(vars.$main-color, 0.95);
+  color: vars.$second-color;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  border: none;
+  
+
+
+  &__logo {
+    display: flex;
+    margin-right: 4rem;
+    margin-left: 2rem;
+  }
+
+  &__links {
+  display: flex;
+  justify-content: center;
+  }
+
+  &__link {
+    text-align: center;
+    margin: 0.5em;
+    font-size: 110%;
+    font-weight:300;
+    &:hover{
+      color: white; 
+      }
+    &--active {
+      color: white;
+    }
+  }
+
+  &__burger {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border:none;
+    color:inherit;
+    display: none;
+  }
+
+  @media screen and (max-width: 768px){
+    
+    &__links{
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      position: fixed;
+      right:0;
+      left:0;
+      top: 0;
+      height: 40vh;
+      padding:1rem;
+      background-color:vars.$main-color ;
+
+    }
+
+    &__link{
+      display: block;
+      padding: 1.5rem;
+      font-size: 20px;
+    }
+
+    &__burger {
+      display: block;
+      position:fixed;
+      top: 1rem;
+      right:1rem;
+    }    
+
+    .burger-bar,
+    .burger-bar::before,
+    .burger-bar::after{
+      display: block;
+      width: 40px;
+      height: 3px;
+      position:relative;
+      border-radius: 3px;
+      background: white;
+
+    }
+    .burger-bar::before,
+    .burger-bar::after{
+      content:"";
+      position: absolute;
+      left:0;
+    }
+
+    .burger-bar::before{
+      transform: translateY(-12px);
+    }
+
+    .burger-bar::after{
+      transform: translateY(12px);
+    }
+
+    .show-nav .navbar__links{
+      right:0;
+      width: 100vw;
+      visibility: visible;
+    }
+
+  }
+
+}

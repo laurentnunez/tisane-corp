@@ -1,0 +1,46 @@
+.podcasts {
+  width: 90%;
+  margin: auto;
+  min-height: 90vh;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 768px){
+    width: 90%;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+  }
+   
+  .podcast {
+    
+    align-items: center;
+    margin: auto;
+    justify-content: space-evenly;
+    padding: 1em;
+    text-align: center;
+
+  
+
+  
+
+  &__image {
+    height: 300px;
+    width: auto;
+    padding: 1em;
+      &:hover {
+      opacity: 0.8;
+      }
+    
+    @media screen and (min-width: 768px){
+        height: 400px;
+        width: auto;
+        padding: 1em;
+      }
+
+      }
+    }  
+    }
+
+
+  
