@@ -4,8 +4,9 @@
   flex-wrap: wrap;
   text-align: center;
   align-items: center;
-   background-color: rgba(vars.$main-color, 0.95);
-  color: vars.$second-color;
+  justify-content: space-around;
+  background-color: vars.$write-color;
+  color: vars.$main-color;
   padding: 1rem;
   position: fixed;
   width: 100%;
@@ -21,19 +22,19 @@
 
 .navbar__links {
   display: flex;
-  justify-content: center;
+  
   }
 
 .navbar__link {
   text-align: center;
   margin: 0.5em;
   font-size: 110%;
-  font-weight:300;
+  font-weight:500;
     &:hover{
-      color: white; 
+      color: vars.$back-color; 
       }
     &--active {
-      color: white;
+      color: vars.$back-color;
     }
   }
 

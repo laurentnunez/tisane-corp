@@ -9,14 +9,16 @@
   align-items: center;
   min-height: 90vh;
   width: 100%;
-
+  margin:auto;
+  padding-left: 7rem;
+  padding-right: 7rem;
 
 &__title {
-  color: vars.$main-color;
   font-size: 40px;
   margin-top: 10rem;
   margin-bottom: 1rem;
   font-size: 200;
+  font-weight: lighter;
   @media screen and (min-width: 768px){
     font-size: 500;
     font-weight: lighter;

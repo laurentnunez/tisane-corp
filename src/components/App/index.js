@@ -8,6 +8,7 @@ import LastsShows from '../LastsShows';
 import Team from '../Team';
 import Podcasts from '../Podcasts';
 import Footer from '../Footer';
+import PodDetails from '../PodDetails';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/podcasts" element={<Podcasts />} />
           <Route path="/derniers-episodes" element={<LastsShows />} />
           <Route path="/a-propos" element={<Team />} />
+          <Route path="/podcast/:id" element={<PodDetails />} />
         </Routes>
       <Footer />
     </div>
