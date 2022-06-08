@@ -48,10 +48,9 @@
       height: 300px;
       width: auto;
       padding: 1em;
-      opacity: 1;
-	    transition: .2s ease-in-out;
+	    transition: filter 300ms ease-in-out;
         &:hover {
-        opacity: 0.8;
+          filter: brightness(1.2);
         }
       
       @media screen and (min-width: 768px){

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import './app.scss';
 
 import Header from '../Header';
@@ -9,9 +10,19 @@ import Team from '../Team';
 import Podcasts from '../Podcasts';
 import Footer from '../Footer';
 import PodDetails from '../PodDetails';
+import Single from '../Single';
 
 function App() {
+  
+  const location = useLocation();
 
+  useEffect(
+    () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    },
+    [location],
+  );
+  
   return (
     <div className="app">
       <Header />
@@ -21,6 +32,7 @@ function App() {
           <Route path="/derniers-episodes" element={<LastsShows />} />
           <Route path="/a-propos" element={<Team />} />
           <Route path="/podcast/:id" element={<PodDetails />} />
+          <Route path="/single" element={<Single />} />
         </Routes>
       <Footer />
     </div>
