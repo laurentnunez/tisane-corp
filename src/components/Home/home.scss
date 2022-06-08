@@ -8,17 +8,35 @@
   text-align: center;
   align-items: center;
   min-height: 90vh;
-  width: 100%;
+  width: 80%;
   margin:auto;
-  padding-left: 7rem;
-  padding-right: 7rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  
+  @media screen and (max-width: 768px){
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 
 &__title {
   font-size: 40px;
-  margin-top: 10rem;
+  margin-top: 7rem;
   margin-bottom: 1rem;
   font-size: 200;
   font-weight: lighter;
+
+  animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.2s both;
+          @keyframes fade-in-top {
+            0% {
+              transform: translateY(-50px);
+              opacity: 0;
+            }
+            100% {
+              transform: translateY(0);
+              opacity: 1;
+            }
+          }
+
   @media screen and (min-width: 768px){
     font-size: 500;
     font-weight: lighter;
@@ -26,15 +44,36 @@
 }
 
 
-&__sub-title {
-  color: vars.$main-color;
-  font-size: 40px;
-  margin-top: 5rem;
+&__description {
+  font-size: 20px;
+  margin-top: 1rem;
   margin-bottom: 0.5rem;
-  font-size: 200;
 
+  animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.3s both;
+          @keyframes fade-in-top {
+            0% {
+              transform: translateY(-50px);
+              opacity: 0;
+            }
+            100% {
+              transform: translateY(0);
+              opacity: 1;
+            }
+          }
 }
 
-
+.podcasts {
+  animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.8s both;
+          @keyframes fade-in-top {
+            0% {
+              transform: translateY(-50px);
+              opacity: 0;
+            }
+            100% {
+              transform: translateY(0);
+              opacity: 1;
+            }
+          }
+}
 
 }

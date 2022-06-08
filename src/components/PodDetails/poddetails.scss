@@ -11,7 +11,7 @@
   margin:auto;
   margin-top: 5rem;
   
-  
+    
     @media screen and (max-width: 1024px){
       flex-direction: column;
       align-items: center;
@@ -89,6 +89,18 @@
   padding-left: 1em;
   margin: auto;
   margin-left: 2em;
+
+  animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.4s both;
+          @keyframes fade-in-top {
+            0% {
+              transform: translateY(-50px);
+              opacity: 0;
+            }
+            100% {
+              transform: translateY(0);
+              opacity: 1;
+            }
+          }
   
   @media screen and (max-width: 1500px){
      margin-left: 1em;
@@ -103,6 +115,18 @@
 &__left-section {
   padding-right: 1em;
   padding-left: 1em;
+
+  animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.2s both;
+          @keyframes fade-in-top {
+            0% {
+              transform: translateY(-50px);
+              opacity: 0;
+            }
+            100% {
+              transform: translateY(0);
+              opacity: 1;
+            }
+          }
 
   @media screen and (max-width: 1024px){
     width: 100%;

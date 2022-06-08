@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
+import { ImMug } from "react-icons/im";
 
 // styles
 import './navbar.scss';
@@ -17,17 +18,11 @@ function Navbar() {
       <NavLink
       to="/"
       className='navbar__logo'
-    >Logo
+    ><ImMug />
     </NavLink>
 
     <div className='navbar__links'>
-    <NavLink
-        to="/derniers-episodes"
-        className={
-        ({ isActive }) => (isActive ? 'navbar__link navbar__link--active' : 'navbar__link')
-        }
-        >Nos Podcasts
-      </NavLink>
+    
       <NavLink
         to="/derniers-episodes"
         className={

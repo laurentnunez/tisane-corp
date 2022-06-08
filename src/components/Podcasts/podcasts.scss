@@ -6,6 +6,10 @@
   &__title {
     margin-top: 8rem;
     font-size: 30px;
+
+    @media screen and (max-width: 768px){
+      margin-top: 4rem;
+    }
   }
 
   &__data {
@@ -35,6 +39,9 @@
       &__title {
         margin-top: 1rem;
         font-size: 20px;
+        @media screen and (max-width: 768px){
+          margin-top: 0rem;
+        }
       }
 
       &__image {
@@ -42,8 +49,7 @@
       width: auto;
       padding: 1em;
       opacity: 1;
-	    -webkit-transition: .3s ease-in-out;
-	    transition: .3s ease-in-out;
+	    transition: .2s ease-in-out;
         &:hover {
         opacity: 0.8;
         }
