@@ -1,4 +1,4 @@
-.poddetails {
+.episodes {
   display:flex;
   flex-direction: column;
   font-family: 'Poppins';
@@ -80,7 +80,6 @@
   padding-top: 1em;
   padding-right: 1em;
   padding-left: 1em;
-  margin: auto;
   margin-left: 2em;
 
   animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.4s both;
@@ -134,13 +133,16 @@
   }
 }
 
-&__post {
-background-color: #1a1d1e;
-padding: 1.5rem;
-padding-bottom: 2.8rem;
-margin-bottom: 2rem;
 }
 
+
+.episode {
+  background-color: #1a1d1e;
+  padding: 1.5rem;
+  padding-bottom: 2.8rem;
+  margin-bottom: 2rem;
+  
+ 
 &__post-description {
   margin-top: 1rem;
   padding-right: 1.5rem;
@@ -161,8 +163,26 @@ margin-bottom: 2rem;
   }
 
 svg {
-  width: 2em;
-  height: 2em;
+  width: 2.5em;
+  height: 2.5em;
 }  
+
+.audioplayer {
+  width: 300px;
+  background-color: white;
+  margin: 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &__play-pause {
+    border: none;
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: #1a1d1e;
+  }
+}
+
 
 }

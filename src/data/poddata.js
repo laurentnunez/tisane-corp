@@ -15,13 +15,6 @@
       title: 'Penser & Faire',
       image: 'https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/production/podcast_uploaded_nologo400/20460142/20460142-1640269513011-0580e0411f991.jpg',
       description: 'Un podcast qui a le mérite d\'exister et qui traite de pleins de sujets de société, de musique, de livre, etc. PS : le nom du podcast va certainement changer ;)',
-      episodes: [
-          {
-              id:1,
-              title:'penser & faire',
-              audio:'https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy83YThjNDk3OC9wb2RjYXN0L3Jzcw/episode/OWNhNjExMzMtNmY0OC00NzNhLWI4MWQtNDVmZjhiNWY4NWE1?sa=X&ved=0CAUQkfYCahcKEwjggpvBtp34AhUAAAAAHQAAAAAQAQ'
-          }
-      ]
   
   },
 ]
