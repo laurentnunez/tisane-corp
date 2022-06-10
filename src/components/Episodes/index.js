@@ -1,6 +1,7 @@
-//import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Episode from './Episode';
-import ucdcEpisodes from '../../data/ucdcEpisodes';
+
+//import ucdcEpisodes from '../../data/ucdcEpisodes';
 // styles
 import './episodes.scss';
 
@@ -8,7 +9,7 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 function Episodes() {
 
-  //const episodes = useSelector((state) => state.episodes);
+  const episodes = useSelector((state) => state.episodes);
 
   return (
    <div className="episodes">
@@ -23,15 +24,17 @@ function Episodes() {
     </div>
     <div className="episodes__right-section">
       <div className="episodes__post">
-        {ucdcEpisodes.map((episode) => (
+      {episodes.length < 1 && <p className="no-event">Il n'y a aucun évènement disponible</p>}
+      { episodes.length > 0
+        && episodes.map((episode) => (
           <Episode
             id={episode.id}
             key={episode.id}
-            name={episode.title}
+            name={episode.name}
             description={episode.description}
-            audio={episode.audio}
           />
-        ))} 
+        ))}
+        <p>HELLO WORLD !!!!!</p>
       </div>
     </div> 
    </div> 

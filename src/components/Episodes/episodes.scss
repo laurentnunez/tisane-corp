@@ -22,6 +22,14 @@
     }
 
 
+
+  &__post {
+    width: 75%;
+    min-height: 50vh;
+    margin: 0 auto;
+    background-color: #1a1d1e;
+  }  
+
   &__title {
     font-size: 20px;
     margin-bottom: 1rem;
@@ -143,28 +151,28 @@
   margin-bottom: 2rem;
   
  
-&__post-description {
-  margin-top: 1rem;
-  padding-right: 1.5rem;
-  padding-left: 3.2rem;
-  line-height:1.6;
-  font-size: 16px;
+  &__post-description {
+    margin-top: 1rem;
+    padding-right: 1.5rem;
+    padding-left: 3.2rem;
+    line-height:1.6;
+    font-size: 16px;
 
-  @media screen and (max-width: 1024px){
-    padding-right: 0.1rem;
-    font-size: 12px;
+    @media screen and (max-width: 1024px){
+      padding-right: 0.1rem;
+      font-size: 12px;
+      }
+
     }
 
-  }
+  &__post-title {
+    padding-left: 3.2rem;
+    font-size: 20px;
+    }
 
-&__post-title {
-  padding-left: 3.2rem;
-  font-size: 20px;
-  }
-
-svg {
-  width: 2.5em;
-  height: 2.5em;
+  svg {
+    width: 2.5em;
+    height: 2.5em;
 }  
 
 .audioplayer {

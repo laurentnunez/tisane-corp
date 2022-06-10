@@ -1,11 +1,11 @@
 import { createStore, compose, applyMiddleware } from 'redux';
 
 import reducer from '../reducers';
-import podcastsMiddleware from '../middlewares/podcasts';
+import episodesMiddleware from '../middlewares/api';
 
 
 const middlewares = [
-  podcastsMiddleware,
+  episodesMiddleware,
 ];
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

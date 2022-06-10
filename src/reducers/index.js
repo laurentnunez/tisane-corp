@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import podcastsReducer from './podcasts';
+import episodesReducer from './episodes';
 
 const rootReducer = combineReducers({
-  podcasts: podcastsReducer,
+  episodes: episodesReducer,
 });
 
 export default rootReducer;

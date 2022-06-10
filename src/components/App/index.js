@@ -1,6 +1,8 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
+import { fetchEpisodes } from '../../actions/episodes';
 import './app.scss';
 
 import Header from '../Header';
@@ -12,7 +14,14 @@ import Footer from '../Footer';
 import Episodes from '../Episodes';
 
 function App() {
-  
+
+  const dispatch = useDispatch();
+  useEffect(
+    () => {
+      dispatch(fetchEpisodes());
+    },
+  );
+
   const location = useLocation();
 
   useEffect(
