@@ -7,10 +7,10 @@ export const fetchEpisodes = () => ({
 });
 
 // ACTION TYPE SAVE_EPISODES
-export const SAVE_EPISODES = 'FETCH_EPISODES';
+export const SAVE_EPISODES = 'SAVE_EPISODES';
 
-// ACTION CREATOR saveEpisodes
-export const saveEpisodes = (episodes) => ({
+// ACTION CREATOR saveEPISODES
+export const saveEpisodes = (data) => ({
   type: SAVE_EPISODES,
-  episodes,
+  data,
 });

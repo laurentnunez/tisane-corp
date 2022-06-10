@@ -24,7 +24,7 @@ const episodesMiddleware = (store) => (next) => (action) => {
         },
       )
       .catch(
-        () => console.log('Problème API'),
+        () => console.log('Problème API EPISODES'),
       );
       next(action);
       break;

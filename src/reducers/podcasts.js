@@ -1,17 +1,15 @@
-import { SAVE_EPISODES } from "../actions/episodes";
+import { SAVE_PODCASTS } from "../actions/podcasts";
 
 export const initialState = {
- 
-   // items:{},
   
 };
 
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
-    case SAVE_EPISODES:
+    case SAVE_PODCASTS:
       return {
         ...state,
-        episodes: action.data,
+        podcasts: action.data,
       };
     default:
       return state;
