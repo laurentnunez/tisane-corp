@@ -9,7 +9,8 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 function Episodes() {
 
-  const episodes = useSelector((state) => state.episodes);
+  const episodes = useSelector((state) => state.episodes.items);
+  console.log(episodes);
 
   return (
    <div className="episodes">
@@ -24,7 +25,7 @@ function Episodes() {
     </div>
     <div className="episodes__right-section">
       <div className="episodes__post">
-      {episodes.length < 1 && <p className="no-event">Il n'y a aucun évènement disponible</p>}
+      {episodes.length < 1 && <p className="no-event">Il n'y a aucun épisode disponible</p>}
       { episodes.length > 0
         && episodes.map((episode) => (
           <Episode
