@@ -18,7 +18,7 @@ function AudioPlayer() {
 
   return(
     <div className="audioplayer">
-      <audio ref={audioPlayer} src="https://archive.org/download/uncoindecine2.0/podcast70-matrix-resurrections.mp3" preload="metadata"></audio>
+      <audio ref={audioPlayer} src="https://anchor.fm/s/722f8e84/podcast/play/49723841/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2022-2-28%2Fa2b8dde1-281e-8923-9a7a-ce6ce7807683.mp3" preload="metadata"></audio>
       <button className="audioplayer__play-pause" onClick={togglePlayPause}>
         { isPlaying ? <FiPause /> : <FiPlay /> }
       </button>

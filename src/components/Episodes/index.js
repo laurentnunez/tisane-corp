@@ -1,17 +1,11 @@
-import { useSelector } from 'react-redux';
-import Episode from './Episode';
-
-//import ucdcEpisodes from '../../data/ucdcEpisodes';
+import Episode from "./Episode";
 // styles
 import './episodes.scss';
-
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 function Episodes() {
 
-  const episodes = useSelector((state) => state.episodes.items);
-  console.log(episodes);
-
+    
   return (
    <div className="episodes">
     <div className="episodes__left-section">
@@ -25,17 +19,11 @@ function Episodes() {
     </div>
     <div className="episodes__right-section">
       <div className="episodes__post">
-      {episodes.length < 1 && <p className="no-event">Il n'y a aucun épisode disponible</p>}
-      { episodes.length > 0
-        && episodes.map((episode) => (
-          <Episode
-            id={episode.id}
-            key={episode.id}
-            name={episode.name}
-            description={episode.description}
-          />
-        ))}
-        <p>HELLO WORLD !!!!!</p>
+        <Episode
+          rssfeed="https://anchor.fm/s/722f8e84/podcast/rss"
+          height="1000px"
+          width="580px"
+        ></Episode>
       </div>
     </div> 
    </div> 

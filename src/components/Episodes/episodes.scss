@@ -85,10 +85,8 @@
 &__right-section {
   
   text-align: left;
-  padding-top: 1em;
-  padding-right: 1em;
-  padding-left: 1em;
-  margin-left: 2em;
+ 
+  
 
   animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.4s both;
           @keyframes fade-in-top {
@@ -104,10 +102,12 @@
   
   @media screen and (max-width: 1500px){
      margin-left: 1em;
+     width: 100%;
   }
 
   @media screen and (max-width: 1024px){
     margin-left:0;
+    width: 100%;
   }
 
 }

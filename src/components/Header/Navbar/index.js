@@ -37,13 +37,6 @@ function Navbar() {
         }
         >A Propos
       </NavLink>
-      <NavLink
-        to="/single"
-        className={
-        ({ isActive }) => (isActive ? 'navbar__link navbar__link--active' : 'navbar__link')
-        }
-        >Single
-      </NavLink>
       <button className='navbar__burger' onClick={handleShowLinks} >
         <span className='burger-bar'></span>
       </button>
