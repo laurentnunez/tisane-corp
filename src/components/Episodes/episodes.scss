@@ -2,14 +2,14 @@
   display:flex;
   flex-direction: column;
   font-family: 'Poppins';
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: row;
   text-align: center;
   align-items: flex-start;
   min-height: 95vh;
   width: 75%;
   margin:auto;
-  margin-top: 5rem;
+  margin-top: 6rem;
   
     
     @media screen and (max-width: 1024px){
@@ -26,7 +26,7 @@
   &__post {
     width: 75%;
     min-height: 50vh;
-    margin: 0 auto;
+    margin: 0;
     background-color: #1a1d1e;
   }  
 
@@ -42,8 +42,9 @@
   &__description {
     font-weight: 200;
     text-align: left;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    width: 80%;
+    margin: auto;
+    padding: 0 2rem 0 2rem;
 
     @media screen and (max-width: 768px){
       
@@ -64,7 +65,7 @@
   &__image {
     height: 400px;
     width: auto;
-    padding: 1em;
+    padding: 0 1em 1em 1em;
     
       @media screen and (max-width: 1024px){
         height: 300px;
@@ -113,9 +114,7 @@
 }
 
 &__left-section {
-  padding-right: 1em;
-  padding-left: 1em;
-
+  width: 40%;
   animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.2s both;
           @keyframes fade-in-top {
             0% {
@@ -128,17 +127,11 @@
             }
           }
 
+  
   @media screen and (max-width: 1024px){
-    width: 100%;
+    width: 30%;
   }
 
-  @media screen and (max-width: 1500px){
-    width: 70%;
-  }
-
-  @media screen and (max-width: 768px){
-   width: 100%;   
-  }
 }
 
 }

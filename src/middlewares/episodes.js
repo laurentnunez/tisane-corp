@@ -1,24 +1,16 @@
 import axios from "axios";
+//import * as rssParser from 'react-native-rss-parser';
 
 import { FETCH_EPISODES, saveEpisodes } from "../actions/episodes";
-
-const options = {
-  method: 'GET',
-  url: 'https://spotify-scraper.p.rapidapi.com/v1/show/episodes',
-  params: {showId: '2E7iYlOhn2AfzTXQuiZMdU', limit: '5'},
-  headers: {
-    'X-RapidAPI-Key': '6a93d7396fmshb2fdee5d455b53fp1d8ae4jsn34d4c6350f90',
-    'X-RapidAPI-Host': 'spotify-scraper.p.rapidapi.com'
-  }
-};
 
 const episodesMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
     case FETCH_EPISODES:
+      axios
+      .get('https://anchor.fm/s/722f8e84/podcast/rss')
       
-      axios.request(options)
-      .then(
-        (response) => {
+      
+      .then((response) => {
         console.log(response.data);
         store.dispatch(saveEpisodes(response.data));
         },
