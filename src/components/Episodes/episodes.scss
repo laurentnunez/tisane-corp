@@ -24,10 +24,10 @@
 
 
   &__post {
-    width: 75%;
+    width: 100%;
     min-height: 50vh;
     margin: 0;
-    background-color: #1a1d1e;
+    
   }  
 
   &__title {
@@ -67,17 +67,10 @@
     width: auto;
     padding: 0 1em 1em 1em;
     
-      @media screen and (max-width: 1024px){
-        height: 300px;
-        width: auto;
-        padding: 1em;
-        margin: auto;
-      }
-
+      
       @media screen and (max-width: 1500px){
         height: 300px;
         width: auto;
-        padding: 1em;
         margin: auto;
       }
 
@@ -139,17 +132,25 @@
 
 .episode {
   background-color: #1a1d1e;
-  padding: 1.5rem;
-  padding-bottom: 2.8rem;
-  margin-bottom: 2rem;
-  
+  padding: 1rem;
+  margin: 0 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: row;  
  
+  &__image {
+    height: 150px;
+    width: 150px;
+  }
+
+  &__data {
+    flex-direction: column;
+  }
+
   &__post-description {
     margin-top: 1rem;
     padding-right: 1.5rem;
-    padding-left: 3.2rem;
     line-height:1.6;
-    font-size: 16px;
+    font-size: 14px;
 
     @media screen and (max-width: 1024px){
       padding-right: 0.1rem;
@@ -159,7 +160,6 @@
     }
 
   &__post-title {
-    padding-left: 3.2rem;
     font-size: 20px;
     }
 
@@ -170,7 +170,6 @@
 
 .audioplayer {
   width: 300px;
-  background-color: white;
   margin: 1em;
   display: flex;
   flex-direction: row;
