@@ -11,13 +11,15 @@ import '../episodes.scss';
 
 //import AudioPlayer from "./AudioPlayer";
 
-function Episode([title, description]) {
+function Episode(title, description) {
   return ( 
   <div className="episode">
     <div className="audioplayer"><FiPlay /></div>
+    <div className="episode__data">
       <div className="episode__post-title">{title}</div>
         <p className="episode__post-description">{description}</p>
-        <img className="episode__image" alt= "72" src="https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode400/19057193/19057193-1648451904545-7cd757063965.jpg"/>
+    </div>
+    <img className="episode__image" alt= "72" src="https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode400/19057193/19057193-1648451904545-7cd757063965.jpg"/>
   </div>
   )    
 }
