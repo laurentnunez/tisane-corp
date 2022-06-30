@@ -5,7 +5,7 @@ import * as rssParser from 'react-native-rss-parser';
 import './episodes.scss';
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { FiPlay } from "react-icons/fi";
-import { rss } from 'react-native-rss-parser/model/rss';
+//import { rss } from 'react-native-rss-parser/model/rss';
 
 // console.log(rss.items);
 
@@ -52,7 +52,7 @@ function Episodes() {
           <div className="episode__data">
             <div className="episode__data-header">
             <div className="audioplayer"><FiPlay /></div>
-              <div className="episode__post-date">{items.pubDate}date de publication</div>
+              <div className="episode__post-date">{items.link}date de publication</div>
             </div>
             <div className="episode__post-title" key={items.title}>{items.title}</div>
             <div className="episode__post-description">

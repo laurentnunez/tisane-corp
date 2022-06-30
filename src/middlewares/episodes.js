@@ -7,16 +7,14 @@ const episodesMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
     case FETCH_EPISODES:
       axios
-      .get('https://anchor.fm/s/722f8e84/podcast/rss')
-      
-      
+      .get('https://anchor.fm/s/722f8e84/podcast/rss')   
       .then((response) => {
         console.log(response.data);
         store.dispatch(saveEpisodes(response.data));
         },
       )
       .catch(
-        () => console.log('Problème API EPISODES'),
+        () => console.log('Problème avec le flux rss'),
       );
       next(action);
       break;
