@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 //import * as rssParser from 'react-native-rss-parser';
 //import Episode from "./Episode";
 // styles
@@ -30,19 +30,19 @@ function Episodes() {
 
 
     useEffect(() => {
+      
       fetch("https://anchor.fm/s/722f8e84/podcast/rss")
-          .then(res => res.text())
+          .then(response => response.text())
           .then(data => {
-              let parser = new DOMParser()
-              let xmlDoc = parser.parseFromString(data, 'text/xml')
-              console.log(xmlDoc)
+            let parser = new DOMParser()
+            let xmlDoc = parser.parseFromString(data, 'text/xml')
+              console.log(xmlDoc);
+              
           })
-          .catch(err => console.log(err));
-  }, [])
+                 
+        });
 
-
-
-
+        
 
 
   
@@ -73,9 +73,9 @@ function Episodes() {
             <div className="audioplayer"><FiPlay /></div>
               <div className="episode__post-date">date de publication</div>
             </div>
-            <div className="episode__post-title" ></div>
+            <div className="episode__post-title" >Titre Episode</div>
             <div className="episode__post-description">
-            <p></p>
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
             <img className="episode__image" alt= "72" src="https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode400/19057193/19057193-1648451904545-7cd757063965.jpg"/>
             </div>
           </div>     
