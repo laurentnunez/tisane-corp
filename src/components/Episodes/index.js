@@ -30,7 +30,7 @@ function Episodes() {
     }, [feed]);
     */
 
-  const episodes =useSelector((state)=> state.episodes);
+  const episodes =useSelector((state)=> state);
   console.log(episodes);
   
   return (
