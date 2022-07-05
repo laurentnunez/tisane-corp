@@ -1,11 +1,11 @@
 import { SAVE_EPISODES } from "../actions/episodes";
 
 export const initialState = {
- // episodes : [
-  //  {
-      items:[]
-  //   },
- // ],
+  //rss : [
+    //{
+     // items:[]
+     //},
+  //],
    
   
 };
