@@ -1,11 +1,11 @@
 import { SAVE_EPISODES } from "../actions/episodes";
 
 export const initialState = {
- // episodes : [
-  //  {
-      items:[]
-  //   },
- // ],
+  episodes : [
+    //{
+      //items:[]
+     //},
+  ],
    
   
 };
@@ -15,7 +15,7 @@ const reducer = (state = initialState, action = {}) => {
     case SAVE_EPISODES:
       return {
         ...state,
-        items:action.data,
+        episodes:action.data,
         };
     default:
       return state;

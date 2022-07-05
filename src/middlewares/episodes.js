@@ -9,7 +9,6 @@ const episodesMiddleware = (store) => (next) => (action) => {
       axios
       .get('https://anchor.fm/s/722f8e84/podcast/rss')   
       .then((response) => {
-        console.log(response.data);
         store.dispatch(saveEpisodes(response.data));
         },
       )

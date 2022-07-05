@@ -1,17 +1,19 @@
-import { useEffect, useState } from 'react';
-import * as rssParser from 'react-native-rss-parser';
+//import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+//import * as rssParser from 'react-native-rss-parser';
 //import Episode from "./Episode";
 // styles
 import './episodes.scss';
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { FiPlay } from "react-icons/fi";
+//import episodes from '../../data/ucdcEpisodes';
 //import { rss } from 'react-native-rss-parser/model/rss';
 
 // console.log(rss.items);
 
 function Episodes() {
   
-  const [feed, setFeed] = useState([]);
+  /*const [feed, setFeed] = useState([]);
   useEffect(() => {
       async function fetchData() {
         const response = fetch(
@@ -26,7 +28,10 @@ function Episodes() {
       }
       fetchData();
     }, [feed]);
+    */
 
+  const episodes =useSelector((state)=> state.episodes);
+  console.log(episodes);
   
   return (
    <div className="episodes">
@@ -47,21 +52,21 @@ function Episodes() {
 
     <div className="episodes__right-section">
       <div className="episodes__post">
-      {feed.map((items) => (
+      
         <div className="episode">
           <div className="episode__data">
             <div className="episode__data-header">
             <div className="audioplayer"><FiPlay /></div>
-              <div className="episode__post-date">{items.link}date de publication</div>
+              <div className="episode__post-date">date de publication</div>
             </div>
-            <div className="episode__post-title" key={items.title}>{items.title}</div>
+            <div className="episode__post-title">titre ep</div>
             <div className="episode__post-description">
-            <p>{items.description}</p>
+            <p>description</p>
             <img className="episode__image" alt= "72" src="https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode400/19057193/19057193-1648451904545-7cd757063965.jpg"/>
             </div>
           </div>     
           
-        </div>))}
+        </div>
 
                 
       </div>
